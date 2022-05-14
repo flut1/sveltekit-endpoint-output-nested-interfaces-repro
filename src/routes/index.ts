@@ -5,7 +5,7 @@ interface GetOutput {
 }
 
 // No TS error
-export const post: RequestHandler<any, GetOutput> = async () => {
+export const get: RequestHandler<any, GetOutput> = async () => {
     return {
         status: 200,
         body: {
@@ -23,7 +23,7 @@ interface PostOutput {
 }
 
 // TS error: Type '{ message: string; }' is not assignable to type 'never'.ts(2322)
-export const get: RequestHandler<any, PostOutput> = async () => {
+export const post: RequestHandler<any, PostOutput> = async () => {
     return {
         status: 200,
         body: {
